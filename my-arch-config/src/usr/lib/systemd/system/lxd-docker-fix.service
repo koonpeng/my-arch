@@ -1,0 +1,14 @@
+# Fixes firewall issues when both lxd and docker is enabled
+
+[Unit]
+Description=Makes sure docker starts after lxd to fix firewall configuration conflicts
+Requires=lxd.service docker.service
+After=lxd.service
+Before=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=true
+
+[Install]
+WantedBy=multi-user.target

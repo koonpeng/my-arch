@@ -1,0 +1,11 @@
+pkgname=my-arch-config
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Personal arch config and settings"
+arch=(any)
+license=(GPL)
+depends=()
+
+package() {
+	cp -r * "$pkgdir"
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+git add repo
+git commit -m "$(date -Iseconds)"
+git push -f
